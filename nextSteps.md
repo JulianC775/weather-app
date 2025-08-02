@@ -12,9 +12,7 @@ Building a React weather application with current weather display and forecast f
 - [x] Subscribe to "One Call by Call" subscription (separate from other plans)
 - [x] Get API key from account dashboard under "API key" tab
 - [x] Set up environment variables (`.env` file):
-  ```
-  REACT_APP_OPENWEATHER_API_KEY=81fcb4fb5fd9a343be7076171c66a238
-  ```
+
 - [x] Create API service utilities in `src/services/`
 - [ ] Test API connectivity with One Call API 3.0 endpoint
 
