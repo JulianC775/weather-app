@@ -122,6 +122,76 @@
 }
 
 /* Responsive Design */
+/* Button Component Styles */
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+}
+
+/* API Test Section Styles */
+.api-test-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.api-test-section h3 {
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+  color: #333;
+}
+
+.api-success {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.api-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f44336;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 1.5rem;
@@ -148,5 +218,9 @@
 
   .weather-description p {
     font-size: 1rem;
+  }
+
+  .api-test-section {
+    padding: 1.5rem;
   }
 }
