@@ -6,6 +6,9 @@ export const Header = ({
   description = "Partly Cloudy",
   icon = "02d",
 }) => {
+  const units = process.env.REACT_APP_DEFAULT_UNITS || 'imperial';
+  const tempSymbol = units === 'imperial' ? '°F' : units === 'metric' ? '°C' : 'K';
+
   return (
     <div className="header">
       <div className="header-content">
@@ -14,7 +17,7 @@ export const Header = ({
         </div>
         <div className="weather-info">
           <div className="temperature">
-            <span className="temp-value">{temperature}°C</span>
+            <span className="temp-value">{temperature}{tempSymbol}</span>
           </div>
           <div className="weather-details">
             <div className="weather-icon">
