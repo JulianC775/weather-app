@@ -45,7 +45,15 @@ function App() {
       setApiTestLoading(true);
       setApiTestError(null);
       setApiTestResult(null);
+
+      // CRUD - HTTP
+      // Create - POST
+      // Read - GET
+      // Update - PUT
+      // Delete - DELETE
+
       const response = await axios.get("/api/test");
+
       setApiTestResult(response.data.message);
     } catch (err) {
       setApiTestError(err.message);
